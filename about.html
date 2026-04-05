@@ -3,49 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Benchmark Leaderboard</title>
+    <title>About - HNC-Benchmark</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <h1>🏥 HNC-Benchmark Leaderboard</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h1>About the Benchmark Leaderboard</h1>
-            <h2>Project Overview</h2>
-            <p>This project aims to provide a comprehensive benchmark leaderboard for machine learning models, allowing users to compare their models against state-of-the-art techniques. The leaderboard is updated regularly to include the latest results.</p>
+        <section class="hero">
+            <h2>About HNC-Benchmark</h2>
+            <p>Comprehensive methodology for clinical reasoning evaluation</p>
         </section>
-        <section>
+
+        <section class="content-section">
+            <h2>Overview</h2>
+            <p>HNC-Benchmark is a comprehensive evaluation framework for multimodal large language models (MLLMs) on head and neck cancer clinical reasoning tasks.</p>
+
             <h2>Methodology</h2>
-            <p>Our methodology involves evaluating models based on multiple criteria including accuracy, efficiency, and robustness. Each submitted model is rigorously tested to ensure fair comparisons.</p>
-        </section>
-        <section>
-            <h2>Four-Step Pipeline</h2>
+            <h3>Four-Step Clinical Pipeline</h3>
             <ol>
-                <li>Data Collection</li>
-                <li>Model Training</li>
-                <li>Model Evaluation</li>
-                <li>Leaderboard Update</li>
+                <li><strong>Staging & Treatment Decision (25%)</strong>: Clinical stage assignment and NCCN pathway selection</li>
+                <li><strong>Surgical Pathology (20%)</strong>: Gross pathology analysis and resection status</li>
+                <li><strong>Microscopic Confirmation (30%)</strong>: WSI microscopy interpretation and refinement</li>
+                <li><strong>Adjuvant Treatment (25%)</strong>: Treatment recommendation based on all evidence</li>
             </ol>
-        </section>
-        <section>
+
             <h2>Evaluation Metrics</h2>
-            <p>We use a variety of metrics to evaluate the models, including precision, recall, F1 score, and AUC-ROC to ensure a comprehensive assessment.</p>
-        </section>
-        <section>
-            <h2>Dataset Information</h2>
-            <p>The datasets used for evaluation are sourced from publicly available collections, ensuring that all submissions are tested on the same standard datasets to maintain consistency across results.</p>
+            <ul>
+                <li><strong>Structured Scoring (60%)</strong>: Automated evaluation of structured fields</li>
+                <li><strong>LLM-Judge (40%)</strong>: Claude-based qualitative assessment</li>
+                <li><strong>Clinical Safety Score (CSS)</strong>: Penalty system for critical errors</li>
+                <li><strong>Cascade vs Independent Modes</strong>: AR (cascade) and IND (ground truth injection)</li>
+            </ul>
+
+            <h2>Dataset</h2>
+            <p><strong>Hancock Collection</strong> (CC BY 4.0):</p>
+            <ul>
+                <li>763 real-world cases from German single center (2005-2019)</li>
+                <li>Multi-modal: clinical records, WSI pathology, surgical reports</li>
+                <li>6 cancer subtypes with detailed NCCN classification</li>
+                <li>Comprehensive ground truth annotations</li>
+            </ul>
+
+            <h2>Citations & References</h2>
+            <p>For detailed methodology, visit our <a href="https://github.com/syaok1/hnc-benchmark">GitHub repository</a>.</p>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 Benchmark Leaderboard</p>
+        <p>&copy; 2026 HNC-Benchmark. Data: Hancock Collection (CC BY 4.0) | <a href="https://github.com/syaok1/hnc-benchmark">GitHub</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
