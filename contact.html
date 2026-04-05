@@ -3,43 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact - HNC-Benchmark</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
+        <h1>🏥 HNC-Benchmark Leaderboard</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <section>
-            <h1>Contact Us</h1>
-            <p>If you have any questions or inquiries, please reach out to us using the contact information below.</p>
+        <section class="hero">
+            <h2>Get in Touch</h2>
+            <p>Questions? Feedback? Let us know!</p>
+        </section>
+
+        <section class="content-section">
             <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
-            <p>Phone: +1 (555) 123-4567</p>
-            <h2>Model Submission Instructions</h2>
-            <p>To submit your model, please follow these instructions:</p>
-            <ol>
-                <li>Ensure your model meets the submission criteria outlined in our documentation.</li>
-                <li>Package your model files in a zip folder.</li>
-                <li>Send your zip folder to <a href="mailto:submissions@example.com">submissions@example.com</a>.</li>
-            </ol>
-            <h2>Hancock Dataset Links</h2>
-            <p>You can find the Hancock dataset here:</p>
+            <p>For inquiries about HNC-Benchmark, please:</p>
             <ul>
-                <li><a href="https://example.com/hancock/train">Training Set</a></li>
-                <li><a href="https://example.com/hancock/test">Test Set</a></li>
+                <li>📧 Open an issue on <a href="https://github.com/syaok1/hnc-benchmark/issues">GitHub Issues</a></li>
+                <li>📝 Submit model evaluation through the <a href="leaderboard.html">Leaderboard</a></li>
+                <li>🔗 Visit the <a href="https://github.com/syaok1/hnc-benchmark">main repository</a></li>
             </ul>
+
+            <h2>Submit Your Model</h2>
+            <p>If you'd like to evaluate your MLLM on HNC-Benchmark:</p>
+            <ol>
+                <li>Follow the evaluation protocol (see <a href="about.html">About</a>)</li>
+                <li>Run your model on the benchmark dataset</li>
+                <li><a href="https://github.com/syaok1/benchmark-leaderboard/issues/new">Submit results via GitHub Issue</a></li>
+                <li>Your model will appear on the leaderboard</li>
+            </ol>
+
+            <h2>Dataset Access</h2>
+            <p>The Hancock dataset is publicly available at:</p>
+            <a href="https://www.cancerimagingarchive.net/collection/hancock/" class="btn-link">Cancer Imaging Archive - Hancock Collection</a>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2026 Benchmark Leaderboard. All rights reserved.</p>
+        <p>&copy; 2026 HNC-Benchmark. Data: Hancock Collection (CC BY 4.0) | <a href="https://github.com/syaok1/hnc-benchmark">GitHub</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
