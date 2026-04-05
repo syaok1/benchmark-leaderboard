@@ -3,62 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HNC-Benchmark Leaderboard</title>
+    <title>HNC-Benchmark Leaderboard - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>HNC-Benchmark Leaderboard</h1>
+        <h1>🏥 HNC-Benchmark Leaderboard</h1>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#leaderboard">Leaderboard</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section class="hero">
-        <h2>Welcome to the HNC-Benchmark Leaderboard</h2>
-        <p>Your one-stop destination for all benchmark case statistics.</p>
-    </section>
-    <section class="statistics">
-        <div class="stat-card">763 Total Cases</div>
-        <div class="stat-card">6 Cancer Subtypes</div>
-        <div class="stat-card">4 Reasoning Steps</div>
-        <div class="stat-card">450 Benchmark Cases</div>
-    </section>
-    <section class="leaderboard">
-        <h2>Model Rankings</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Rank</th>
-                    <th>Model Name</th>
-                    <th>Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Model A</td>
-                    <td>95.5</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Model B</td>
-                    <td>92.3</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Model C</td>
-                    <td>90.1</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+
+    <main>
+        <section class="hero">
+            <h2>Head and Neck Cancer Clinical Reasoning Benchmark</h2>
+            <p>Evaluating MLLM performance on multi-modal clinical decision-making with 763 real-world cases</p>
+        </section>
+
+        <section class="statistics">
+            <div class="stat-card">
+                <div class="stat-number">763</div>
+                <div class="stat-label">Total Cases</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Cancer Subtypes</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Reasoning Steps</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">450</div>
+                <div class="stat-label">Benchmark Cases</div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Welcome to HNC-Benchmark</h2>
+            <p>This is a comprehensive benchmark for evaluating the clinical reasoning capabilities of multimodal large language models (MLLMs) on head and neck cancer (HNC) diagnosis and treatment planning.</p>
+            
+            <h3>Dataset Highlights</h3>
+            <ul>
+                <li><strong>763 Cases</strong> from Hancock Collection (CC BY 4.0 open license)</li>
+                <li><strong>6 Cancer Subtypes</strong>: Oral, Oropharyngeal, Hypopharyngeal, Laryngeal (Glottic/Supraglottic)</li>
+                <li><strong>Multi-modal Data</strong>: Clinical records, WSI pathology images, surgical reports</li>
+                <li><strong>4-Step Pipeline</strong>: Staging → Pathology → Microscopy → Treatment</li>
+            </ul>
+
+            <h3>Key Features</h3>
+            <ul>
+                <li>⚕️ Clinical Safety Scoring (CSS) to detect critical errors</li>
+                <li>🔬 Multi-modal reasoning with WSI microscopy patches</li>
+                <li>📊 Comprehensive evaluation framework with 60% structured + 40% LLM-Judge</li>
+                <li>🌐 Public benchmark with transparent scoring</li>
+            </ul>
+
+            <h3>Get Started</h3>
+            <p>Browse the <a href="leaderboard.html">Leaderboard</a> to see how different models perform, or visit <a href="about.html">About</a> for detailed methodology.</p>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2026 HNC-Benchmark. All rights reserved.</p>
+        <p>&copy; 2026 HNC-Benchmark. Data: Hancock Collection (CC BY 4.0) | <a href="https://github.com/syaok1/hnc-benchmark">GitHub</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
