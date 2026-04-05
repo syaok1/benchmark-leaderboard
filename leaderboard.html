@@ -3,63 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leaderboard</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #dddddd; text-align: left; padding: 8px; }
-        th { background-color: #f2f2f2; }
-        h2 { text-align: center; }
-        nav { background-color: #333; padding: 10px; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; }
-    </style>
+    <title>Leaderboard - HNC-Benchmark</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Models</a>
-        <a href="#">Scores</a>
-        <a href="#">Contact</a>
-    </nav>
-    <h2>Benchmark Leaderboard</h2>
-    <table>
-        <tr>
-            <th>Rank</th>
-            <th>Model Name</th>
-            <th>Organization</th>
-            <th>Total Score</th>
-            <th>Step 1 Score</th>
-            <th>Step 2 Score</th>
-            <th>Step 3 Score</th>
-            <th>Step 4 Score</th>
-            <th>CSS Score</th>
-            <th>Date</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Model A</td>
-            <td>Org X</td>
-            <td>95</td>
-            <td>20</td>
-            <td>25</td>
-            <td>15</td>
-            <td>10</td>
-            <td>25</td>
-            <td>2026-04-05 13:36:52</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Model B</td>
-            <td>Org Y</td>
-            <td>90</td>
-            <td>18</td>
-            <td>24</td>
-            <td>14</td>
-            <td>10</td>
-            <td>24</td>
-            <td>2026-04-05 13:36:52</td>
-        </tr>
-        <!-- Add more models as needed -->
-    </table>
+    <header>
+        <h1>🏥 HNC-Benchmark Leaderboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="leaderboard.html" class="active">Leaderboard</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Model Rankings</h2>
+            <p>Performance comparison across all models on HNC-Benchmark</p>
+        </section>
+
+        <section class="leaderboard">
+            <div class="filter-group">
+                <label><input type="checkbox" id="filterGeneral" checked> General Models</label>
+                <label><input type="checkbox" id="filterMedical" checked> Medical Models</label>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model Name</th>
+                        <th>Organization</th>
+                        <th>Total Score</th>
+                        <th>Step 1</th>
+                        <th>Step 2</th>
+                        <th>Step 3</th>
+                        <th>Step 4</th>
+                        <th>CSS Score</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 HNC-Benchmark. Data: Hancock Collection (CC BY 4.0) | <a href="https://github.com/syaok1/hnc-benchmark">GitHub</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
