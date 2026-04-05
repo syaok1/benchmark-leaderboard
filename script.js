@@ -1,25 +1,30 @@
-// Dynamic leaderboard data
+// complete leaderboard data
 const leaderboardData = [
-    { rank: 1, name: 'GPT-4o', score: 0.872 },
-    { rank: 2, name: 'Claude-Sonnet-4', score: 0.856 },
-    { rank: 3, name: 'Gemini-2.0-Pro', score: 0.843 },
-    { rank: 4, name: 'LLaMA-3.1', score: 0.821 },
-    { rank: 5, name: 'Qwen-VL', score: 0.798 }
+    { model: 'GPT-4o', score: 95 },
+    { model: 'Claude-Sonnet-4', score: 90 },
+    { model: 'Gemini-2.0-Pro', score: 92 },
+    { model: 'LLaMA-3.1', score: 88 },
+    { model: 'Qwen-VL-Max', score: 91 },
 ];
 
+// function to render the leaderboard table dynamically
 function renderLeaderboard() {
-    const tbody = document.querySelector('table tbody');
-    tbody.innerHTML = '';
-    
-    leaderboardData.forEach((entry) => {
+    const tableBody = document.getElementById('leaderboard-body'); // Assuming you have a table body with id 'leaderboard-body'
+    tableBody.innerHTML = ''; // Clear existing table data
+
+    leaderboardData.forEach(entry => {
         const row = document.createElement('tr');
-        row.innerHTML = `
-            <td>${entry.rank}</td>
-            <td>${entry.name}</td>
-            <td>${entry.score.toFixed(3)}</td>
-        `;
-        tbody.appendChild(row);
+        const modelCell = document.createElement('td');
+        const scoreCell = document.createElement('td');
+
+        modelCell.textContent = entry.model;
+        scoreCell.textContent = entry.score;
+
+        row.appendChild(modelCell);
+        row.appendChild(scoreCell);
+        tableBody.appendChild(row);
     });
 }
 
+// Call the function to render the leaderboard
 document.addEventListener('DOMContentLoaded', renderLeaderboard);
